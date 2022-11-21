@@ -2,20 +2,11 @@ import "./moduleAliases";
 
 export {};
 
-const target = "Is this all there is?";
-const regexp = /is/g; // 문자열 내 모든 패턴을 검색하는 g 플래그
+const target = " Hi";
 
-console.log(target.match(regexp)); // 대소문자를 구분해서 길이 2인 배열이 나옴
+// 하나 이상의 공백으로 시작하는지 검사
+// \s 는 여러가지 공백문자 (스페이스, 탭 등)를 의미한다
 
-// 시작 위치로 검색
-const jihyunRepo = "https://github.com/ji-hyun219?tab=repositories";
+const regExp = /^[\s]+/;
 
-// https 로 시작하는지 검사
-const regExp = /^https/;
-
-console.log(regExp.test(jihyunRepo));
-
-// 마지막 위치로 검색
-const lastRegExp = /repositories$/;
-
-console.log(lastRegExp.test(jihyunRepo));
+console.log(regExp.test(target));
